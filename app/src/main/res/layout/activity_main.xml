@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/morzeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tlo_wyspa_background"
+        android:scaleType= "fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tlo_wyspa" />
+
+    <ImageView
+        android:id="@+id/zamekView"
+        android:layout_width="283dp"
+        android:layout_height="125dp"
+        app:layout_constraintBottom_toBottomOf="@+id/morzeView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/morzeView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.439"
+        app:srcCompat="@drawable/zamek" />
+
+    <ImageButton
+        android:id="@+id/statek_button"
+        style="@android:style/Widget.Material.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="statek_button"
+        android:onClick="onButtonClick"
+        android:scaleType="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/morzeView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zamekView"
+        app:layout_constraintVertical_bias="0.964"
+        app:srcCompat="@drawable/statek_wersja2" />
+
+    <TextView
+        android:id="@+id/wynik"
+        android:layout_width="110dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toTopOf="@+id/hpBar"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/morzeView"
+        app:layout_constraintVertical_bias="0.387" />
+
+    <ImageView
+        android:id="@+id/explosionViev"
+        android:layout_width="55dp"
+        android:layout_height="53dp"
+        app:layout_constraintBottom_toBottomOf="@+id/zamekView"
+        app:layout_constraintEnd_toEndOf="@+id/zamekView"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/zamekView"
+        app:layout_constraintTop_toTopOf="@+id/zamekView"
+        app:layout_constraintVertical_bias="0.222" />
+
+    <ImageView
+        android:id="@+id/explosionViev2"
+        android:layout_width="41dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="149dp"
+        app:layout_constraintBottom_toBottomOf="@+id/zamekView"
+        app:layout_constraintEnd_toEndOf="@+id/zamekView"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/zamekView"
+        app:layout_constraintTop_toTopOf="@+id/zamekView"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <ImageView
+        android:id="@+id/explosionView3"
+        android:layout_width="53dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/zamekView"
+        app:layout_constraintEnd_toEndOf="@+id/zamekView"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/zamekView"
+        app:layout_constraintTop_toTopOf="@+id/zamekView"
+        app:layout_constraintVertical_bias="0.51" />
+
+
+    <ImageButton
+        android:id="@+id/normalGunButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onNormalGunButtonClick"
+        android:scaleType="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/morzeView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/morzeView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/normall_gun"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/betterGunButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBetterGunButtonClick"
+        app:layout_constraintBottom_toBottomOf="@+id/morzeView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/normalGunButton"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/better_gun" />
+
+    <Button
+        android:id="@+id/Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onResetButtonClick"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="@+id/morzeView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/morzeView"
+        app:layout_constraintVertical_bias="0.91" />
+
+    <TextView
+        android:id="@+id/numberOfNormalGunsTextViev"
+        android:layout_width="70dp"
+        android:layout_height="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/Reset"
+        app:layout_constraintEnd_toStartOf="@+id/normalGunButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/costOfNormallGunTextViev"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <TextView
+        android:id="@+id/costOfNormallGunTextViev"
+        android:layout_width="71dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/normalGunButton"
+        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <ProgressBar
+        android:id="@+id/hpBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="103dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="69dp"
+        app:layout_constraintBottom_toTopOf="@+id/zamekView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/damageAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="486dp"
+        android:layout_marginRight="486dp"
+        android:layout_marginBottom="277dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="405dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
