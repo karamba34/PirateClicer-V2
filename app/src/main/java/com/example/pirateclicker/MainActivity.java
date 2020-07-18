@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity{
     private Handler mHandler = new Handler();
     Context context;
 
-    //@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+
     @Override
         protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
